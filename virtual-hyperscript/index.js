@@ -69,7 +69,7 @@ function addChild(c, childNodes, tag, props) {
         for (var i = 0; i < c.length; i++) {
             addChild(c[i], childNodes, tag, props);
         }
-    } else if (c === null || c === undefined) {
+    } else if (!c) {
         return;
     } else {
         throw UnexpectedVirtualElement({
